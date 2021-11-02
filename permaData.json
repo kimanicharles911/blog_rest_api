@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "title 1 x",
+    "body": "this is post 1 x"
+  },
+  {
+    "id": 2,
+    "title": "title 2 x",
+    "body": "this is post 2 x"
+  },
+  {
+    "id": 3,
+    "title": "this is post 3",
+    "body": "this is the ultra neo-updated body of post 3"
+  },
+  {
+    "id": 4,
+    "title": "this is post 3",
+    "body": "this is the neo-updated body of post 4"
+  }
+]
