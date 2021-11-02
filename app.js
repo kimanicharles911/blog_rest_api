@@ -85,7 +85,7 @@ app.post('/api/blogs/new', (req, res) => {
   * I then utilized the writeFile method to set changed values to the data.json file using the dataArr variable. I first converted the dataArr variable to a JSON object with JSON.stringify. The null and number 2 value after passing the data variable are used to make data written to data.json readable.
   * I then return a success message.
   * Example test URL: http://localhost:3000/api/blog?id=2
-      In the body of the request set this as the JSON content
+      In the body of the request set this as the JSON content:
         {
           "body": "this is the body of post 10"
         }
@@ -133,6 +133,10 @@ app.delete('/api/blog', (req, res) => {
   });
 });
 
+app.get('*', (req, res) => {
+  res.status(404).send('Sorry! Can’t find that resource. Please check your URL.')
+});
+
 app.listen(port, () => {
   console.log(`App server is started at port ${port}`)
 });
@@ -144,4 +148,5 @@ app.listen(port, () => {
   * I executed the .json() middleware function on the express app function to enable sending of data in JSON format.
   * I imported the fileSystem module to enable me write to files.
   * From the app object with the express function I used the listen method and set the port.
+  * I then added a get request that returns a fail message for any request to an undefined route.
 */
