@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> This is a basic blog rest-api created using Expressjs. It covers the 4 main http methods. It has two methods of managing updated data: the best is the one that stores updated data in a JSON file, while the other stores the initializing data in a normal JS variable and when the data is updated the variable does not change however it changes logically and will be proved when you test with http methods. The latter method is covered in the first two commits of this repo. The comments the file app.js allow easy understanding of how it functions.
+> This is a basic blog rest-api created using Expressjs. It covers the 4 main http methods. It has two methods of managing data: the best is the one that stores updated data in a JSON file, while the other stores the initializing data in a normal JS variable and when the data is updated the variable does not change however it changes logically and will be proved when you test with http methods. The latter method is covered in the first two commits of this repo. The comments the file app.js allow easy understanding of how it functions.
 
 ## Setup/Installation Requirements
 ##### Install Dependencies
