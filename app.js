@@ -110,9 +110,10 @@ app.put('/api/blog', (req, res) => {
   * I utilized the fs readFile method to get the json data found in the file data.json
   * I then converted the data from the JSON file to normal JS objects and stored it in the variable dataArr since the objects are in an array.
   * The blog with the id is looked for with the find array method applied on the dataArr containing all blogs, the blog is then stored on the blog variable.
-  * I then use the splice array method to delete from the dataArr the object in the index similar to that of the blog variable.
+  * If a blog with that id exists I use the splice array method to delete from the dataArr the object in the index similar to that of the blog variable.
   * I then utilized the writeFile method to set the remaining values to the data.json file using the dataArr variable. I first converted the dataArr variable to a JSON object with JSON.stringify. The null and number 2 value after passing the data variable are used to make data written to data.json readable.
   * I then return a success message.
+  * If a blog with that id doesn't exist a fail message is returned.
   * Example test URL: http://localhost:3000/api/blog?id=2
 */
 app.delete('/api/blog', (req, res) => {
@@ -120,11 +121,15 @@ app.delete('/api/blog', (req, res) => {
     if(err) throw err;
     let dataArr = JSON.parse(data);
     const blog = dataArr.find(blog => blog.id === parseInt(req.query.id));
-    dataArr.splice(dataArr.indexOf(blog), 1);
-    fileSystem.writeFile('data.json', JSON.stringify(dataArr, null, 2), (err) => {
-      if(err) throw err;
-      return res.send(`Blog ${blog.id} deleted`);
-    })
+    if(blog){
+      dataArr.splice(dataArr.indexOf(blog), 1);
+      fileSystem.writeFile('data.json', JSON.stringify(dataArr, null, 2), (err) => {
+        if(err) throw err;
+        return res.send(`Blog ${blog.id} deleted`);
+      });
+    }else{
+      return res.send(`No blog with the id ${req.query.id} exists.`);
+    }
   });
 });
 
