@@ -63,7 +63,7 @@ heroku login
 touch Procfile
 git add . 
 git commit -m"first deploy to heroku"
-## optional for pushing to guthub git push -u origin master
+## optional for pushing to github: git push -u origin master
 git push heroku master
 ```
 
