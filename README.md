@@ -11,6 +11,15 @@
 ## Deployed at
 * https://gittedblogrestapi.herokuapp.com/api/blogs
 
+##### API Usage
+| HTTP method      |   EndPoint   |   Public Access   |   Example   |
+| ---- |:---- |:---- |:---- |
+| GET     | /api/blogs/    |  TRUE    |  https://gittedblogrestapi.herokuapp.com/api/blogs/    |
+| GET     | /api/blogs?id=2    |  TRUE    |  https://gittedblogrestapi.herokuapp.com/api/blogs?id=2    |
+| POST     | /api/blogs/new/    |  TRUE    |  https://gittedblogrestapi.herokuapp.com/api/blogs/new/    |
+| PUT     | /api/blogs?id=2    |  TRUE    |  https://gittedblogrestapi.herokuapp.com/api/blogs?id=2    |
+| DELETE     | /api/blogs?id=2    |  TRUE    |  https://gittedblogrestapi.herokuapp.com/api/blogs?id=2    |
+
 ## Setup/Installation Requirements
 ##### Install Dependencies
 
@@ -19,7 +28,7 @@ sudo apt install nodejs #(for linux platform)
 npm i
 ```
 
-##### Usage
+##### Development Usage
 
 ```sh
 npm run dev
