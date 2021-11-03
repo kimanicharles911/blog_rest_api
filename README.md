@@ -1,4 +1,4 @@
-<h1 align="center"><a href="https://gittedblogrestapi.herokuapp.com/api/blogs" target="_blank">blog rest api</a></h1>
+<h1 align="center"><a href="https://gittedblogrestapi.herokuapp.com/api/blogs" target="_blank">🌐 blog rest api</a></h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/kimanicharles911/emmethub_nodejs_modules/blob/master/LICENSE.txt" target="_blank">
