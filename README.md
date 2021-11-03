@@ -1,4 +1,4 @@
-<h1 align="center">blog rest api</h1>
+<h1 align="center"><a href="https://gittedblogrestapi.herokuapp.com/api/blogs" target="_blank">blog rest api</a></h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/kimanicharles911/emmethub_nodejs_modules/blob/master/LICENSE.txt" target="_blank">
@@ -36,6 +36,36 @@ npm i nodemon --save-dev
 * Node
 * Express
 * Nodemon
+
+##### Deploy to Heroku
+* Add this in package.json
+```sh
+"engines": {
+  "node": "14.15.1"
+}
+```
+* Then run the following terminal commands:
+```sh
+install heroku
+heroku login
+touch Procfile
+```
+
+* Add this line in the Procfile which will depend with the name of your server file which in my case is app.js:
+```sh
+web: node app.js
+```
+
+* Then run the following terminal commands:
+```sh
+heroku create
+heroku login
+touch Procfile
+git add . 
+git commit -m"first deploy to heroku"
+## optional for pushing to guthub git push -u origin master
+git push heroku master
+```
 
 ## License and Copyright Information.
 
